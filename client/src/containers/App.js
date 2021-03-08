@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
+import { connect } from 'react-redux';
 
 import Home from "../pages/Home";
 import Detail from "../pages/Detail";
@@ -49,4 +50,8 @@ function App() {
   );
 }
 
-export default App;
+function mapStateToProps(state) {
+  return {};
+}
+
+export default connect(mapStateToProps)(App);
